@@ -1,36 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV - Akil Mohamed Shems-Dine</title>
+  <style>
+    :root{
+      --bg:#0b0f12;
+      --panel:#0e1418;
+      --accent:#39ff14;
+      --muted:#86b8a0;
+      --text:#cfeee1;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Source Code Pro", "Courier New", monospace;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(57,255,20,0.03), transparent), var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:30px;
+    }
+    .card{
+      max-width:900px;
+      margin:0 auto;
+      background:linear-gradient(180deg,var(--panel), #071014);
+      border-radius:12px;
+      padding:28px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      border:1px solid rgba(57,255,20,0.06);
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:20px;
+    }
+    header{
+      grid-column:1/3;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border-bottom:1px dashed rgba(255,255,255,0.03);
+      padding-bottom:12px;
+      margin-bottom:12px;
+    }
+    .name{
+      font-size:22px;
+      color:var(--accent);
+      letter-spacing:0.6px;
+    }
+    .sub{font-size:12px;color:var(--muted)}
+    .contact{ text-align:right; font-size:13px }
+    .contact p{margin:2px 0}
 
-<html>
+    .section{background:var(--glass); padding:14px; border-radius:8px;}
+    h3{margin:0 0 8px 0; color:var(--accent); font-size:14px}
+    p, li{color:var(--text); font-size:13px; line-height:1.4}
+    ul{padding-left:18px; margin:6px 0}
+
+    .skills{display:flex; flex-direction:column; gap:8px}
+    .skill-bar{height:8px; background:rgba(255,255,255,0.03); border-radius:6px; overflow:hidden}
+    .skill-level{height:100%; background:linear-gradient(90deg, rgba(57,255,20,0.18), rgba(57,255,20,0.38));}
+
+    .full{grid-column:1/3}
+    .left{grid-column:1/2}
+    .right{grid-column:2/3}
+
+    footer{grid-column:1/3; text-align:center; margin-top:12px; font-size:12px; color:var(--muted)}
+
+    @media (max-width:720px){
+      .card{grid-template-columns:1fr}
+      .contact{text-align:left}
+    }
+  </style>
+</head>
 <body>
+  <div class="card">
+    <header>
+      <div>
+        <div class="name">AKIL MOHAMED SHEMS-DINE</div>
+        <div class="sub">Étudiant Bachelor Cybersécurité — Guardia School, La Défense</div>
+      </div>
+      <div class="contact">
+        <p>📍 Argenteuil (95100)</p>
+        <p>📞 06 67 22 99 59 • ✉️ shemsdine95@gmail.com</p>
+        <p>🚗 Permis B</p>
+      </div>
+    </header>
 
-<h1>Voici la premiere version de mon CV HTML </h1>
+    <section class="section full">
+      <h3>Profil</h3>
+      <p>Jeune étudiant en 1re année de Bachelor Cybersécurité motivé et polyvalent, avec une expérience pratique dans la vente, l'événementiel et l'automobile. Je cherche des missions ou un stage en cybersécurité / support IT pour développer mes compétences techniques et passer de la théorie à la pratique.</p>
+    </section>
 
-<h1>AKIL MOHAMED SHEMS-DINE</h1>
-<p> 18 ans</p>
-<p> Argenteuil (95100)</p>
-<p> 06 67 22 99 59</p>
-<p> shemsdine95@gmail.com</p>
-<p> Permis B + véhicule</p>
+    <section class="section left">
+      <h3>Formation</h3>
+      <ul>
+        <li><strong>2025 – Actuel</strong> : Guardia Cybersecurity School – La Défense (Bachelor 1 en Cybersécurité)</li>
+        <li><strong>2025</strong> : Baccalauréat STI2D (Sciences et Technologies de l'Industrie et du Développement Durable)</li>
+      </ul>
 
-<h2> FORMATION </hé>
-<p>2025 – Actuel | Guardia Cybersecurity School – La Défense (Paris)</p>
+      <h3 style="margin-top:12px">Expériences</h3>
+      <ul>
+        <li><strong>Vendeur</strong> – Marché d'Argenteuil (Fruits & Légumes) : accueil, réassort, caisse.</li>
+        <li><strong>Serveur / Aide traiteur</strong> – Événementiel : mise en place, service, aide en cuisine.</li>
+        <li><strong>Aide mécanicien</strong> – Garage automobile : récupération de pièces, organisation atelier, manutention.</li>
+      </ul>
 
-<p>2025 | Baccalauréat STI2D</p>
+      <h3 style="margin-top:12px">Langues</h3>
+      <ul>
+        <li>Français : courant</li>
+        <li>Anglais : niveau scolaire (en progression)</li>
+      </ul>
+    </section>
 
-<h1> EXPÉRIENCES PROFESSIONNELLES </h1> 
-<p> Vendeur – Marché d’Argenteuil (Fruits & Légumes)</p>
-<p> Serveur / Aide Traiteur – Événementiel</p>
-<p> Aide Mécanicien – Garage Automobile</p>
+    <section class="section right">
+      <h3>Compétences techniques</h3>
+      <div class="skills">
+        <div>
+          <p style="margin:0 0 6px 0"><strong>Cybersécurité :</strong> notions en sécurité des réseaux, concepts de confidentialité et d'authentification. (En formation)</p>
+          <div class="skill-bar"><div class="skill-level" style="width:50%"></div></div>
+        </div>
 
-<h1> COMPÉTENCES: </h1>
-<p> .Informatique / Cyber</p>
-<p> .Bases en cybersécurité (réseaux & systèmes)</p>
-<p>.Initiation Linux / Windows</p>
-<p>.Utilisation plateformes de pièces auto</p>
+        <div>
+          <p style="margin:0 0 6px 0"><strong>Systèmes & Réseaux :</strong> bases Linux & Windows, configuration réseau simple.</p>
+          <div class="skill-bar"><div class="skill-level" style="width:40%"></div></div>
+        </div>
 
-<h1> Qualités :</h1>
-<p> Sérieux, motivé, dynamique</p>
-<p> À l’aise avec la clientèle</p>
-<p> Travail en équipe</p>
-<p> Adaptabilité & résistance au rythme</p>
+        <div>
+          <p style="margin:0 0 6px 0"><strong>Outils (en cours d'apprentissage) :</strong> VirtualBox, Git, Wireshark — familiarisation et premiers projets.</p>
+          <div class="skill-bar"><div class="skill-level" style="width:35%"></div></div>
+        </div>
+
+        <div>
+          <p style="margin:0 0 6px 0"><strong>Autres :</strong> notions de HTML/CSS et logique de scripts (en apprentissage).</p>
+          <div class="skill-bar"><div class="skill-level" style="width:30%"></div></div>
+        </div>
+      </div>
+
+      <h3 style="margin-top:12px">Qualités & savoir‑être</h3>
+      <ul>
+        <li>Sérieux, ponctuel et motivé</li>
+        <li>Bon relationnel client et sens du service</li>
+        <li>Capacité d'adaptation et goût du travail en équipe</li>
+        <li>Autonomie & prise d'initiative</li>
+      </ul>
+
+      <h3 style="margin-top:12px">Informations complémentaires</h3>
+      <ul>
+        <li>Permis B – véhicule disponible pour déplacements</li>
+        <li>Disponibilité : dès que possible (stage/alternance/emploi étudiant)</li>
+        <li>Références : disponibles sur demande</li>
+      </ul>
+    </section>
+
+    <section class="full">
+      <h3>Centres d'intérêt</h3>
+      <p>Cybersécurité, nouvelles technologies, automobile, sport (musculation). J'aime aussi participer à des projets techniques et monter des petits environnements de test pour m'entraîner.</p>
+    </section>
+
+    <footer>CV généré — Akil Mohamed Shems‑Dine • contact : shemsdine95@gmail.com</footer>
+  </div>
 </body>
 </html>
+
